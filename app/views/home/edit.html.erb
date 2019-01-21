@@ -1,0 +1,19 @@
+<body style="background-image:url('/bgbg.jpg')">
+<div style="font-family: 'Do Hyeon', sans-serif;">
+<br><br><br>
+<center><font style="font-size:60pt;"><span class="glyphicon glyphicon-edit"></span>&nbsp;편지 수정</font></center>
+
+<br><br><br>
+
+<form action="/home/update/<%=@post.id%>" method="post" align="center">
+             <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            
+             <br><br>
+             <textarea name="post_letter" cols="70" rows="7"style="background-color:transparent;"> <%= @post.letter%> </textarea>
+             <br><br><br><br>
+             <font style="font-size:30pt;">From.</font> <input type="text" name="post_name" value = "<%= @post.name%>" style="background-color:transparent;">
+             <br><br>
+             <button type="submit" class="btn btn-warning">수정완료</button>
+    </form>
+</div>    
+    

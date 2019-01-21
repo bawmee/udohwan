@@ -1,0 +1,18 @@
+<body style="background-image:url('/bgbg.jpg')">
+
+
+<br><br><br>
+<div style="font-family: 'Do Hyeon', sans-serif;">
+    <center><font style="font-size:60pt;">To.도환쨩..♥</font></center><br><br>
+<form action="/home/create" method="post" align="center">
+             <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+             
+             <br><br>
+             <textarea name="post_letter" cols="70" rows="7"style="background-color:transparent;"> </textarea>
+             <br><br><br><br>
+             <font style="font-size:30pt;">From.</font> <input type="text" name="post_name" style="background-color:transparent;">
+             <br><br>
+             <button type="submit" class="btn btn-warning">보내기</button>
+    </form>
+</div>    
+</body>    

@@ -1,0 +1,42 @@
+<body style="background-image:url('/bgbg.jpg');font-family: 'East Sea Dokdo', cursive;">
+  
+  <div align="right" style="font-size:15pt; margin-top:30px; margin-bottom:30px;margin-right:20px">
+    <a href="/home/new" target="_blank">
+          <span class="glyphicon glyphicon-edit"></span> &nbsp;새 편지 쓰러가기
+    </a>
+     &nbsp;
+    <a href="/index">
+          <span class="glyphicon glyphicon-repeat"></span>&nbsp;메인으로 돌아가기
+     </a>
+
+    
+  </div>
+<div style="text-align:center;align:center;">
+  <br><br><br>
+<font style="font-size:60pt;color:Crimson"> <span class="glyphicon glyphicon-send"></span> 우체통</font>
+<br><br>
+
+<img src="/woo.jpg" class="img-circle" alt="화니화니 도환이" width = "600px" height = "500px">
+<div class="alert alert-warning">
+  <strong>화이팅!</strong>
+</div>
+  
+    <% @posts.each do |x|%>
+      <table  width="700" height="300" style="margin-top:30px; margin-bottom:30px;border:2px black solid;" align="center"> 
+        <tr>
+          <th colspan="2" style="text-align:center; font-size:30pt;"> ღ<%=x.name%>님ღ 께서 보낸 편지</th>
+        </tr>
+        <tr>
+          <td colspan="2" style="font-size:15pt;"><%=x.letter%></td>
+        </tr>
+        <tr style="font-size:20pt;">
+          <td><a href="/home/edit/<%=x.id%>">수정</a></td>
+          <td><a href="/home/delete/<%=x.id%>">삭제</a></td>
+        </tr>
+        </table>
+      
+    <%end%> 
+      
+    
+</div>
+</body>
